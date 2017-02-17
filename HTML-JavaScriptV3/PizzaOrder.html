@@ -1,0 +1,145 @@
+<html>
+
+	<head>
+		
+		<title>
+			Aaron's Pizza Order
+		</title>
+		<!-- 
+		<this should be in the script Section>		Thank you, [NAME]!
+		The order is placed for a medium sized deep dish pizza with beef, mushroom toppings.
+		It will be delivered to [ADDRESS].
+		The total cost of the order is [CALCULATED COST](see below)
+		A confirmation will be sent to [EMAIL].
+	-->
+		<script>
+			
+		function submitorder() {
+			// Form 1 Variables
+			var name = document.form1.name.value;
+				if (name == null || name == "") {
+				alert("Name must be filled out");
+				return false;
+				}
+			// Form 1 Variables
+			var address = document.form1.address.value;
+				if (address == null || address == "") {
+				alert("Address must be filled out");
+				return false;
+				}
+			// Form 1 Variables
+			var email = document.form1.email.value;
+			var atpos = email.indexOf("@");
+			var dotpos = email.lastIndexOf(".");
+			if (atpos<1 || dotpos<atpos+2 || dotpos+2>=email.length) {
+			alert("Not a valid e-mail address");
+			return false;
+			}
+			// Form 2 Variables
+			var pizzas = document.form2.pizzasize.value;
+			var largepi = document.getElementById("largep").checked;
+			var meduiumpi = document.getElementById("mediump").checked;
+			var smallpi = document.getElementById("smallp").checked;
+			// Form 4 variables
+			var regularpi = document.getElementById("regularpizza").value;
+			var deepdishpi = document.getElementById("deepdishpizza").value;
+			
+			if (pizzas == "") {
+				alert("Select Pizza Size");
+			return false;
+			}
+			if ( smallpi == true && deepdishpi == deepdishpi ){
+				alert("Deep Dish is only available in Large and Medium size pizzas.")
+				return false;
+			
+			}
+			
+			// Form 3 Variables
+			var cheese = document.getElementById("cp").checked;
+			var olive = document.getElementById("op").checked;
+			var tomato = document.getElementById("tp").checked;
+			var mushroom = document.getElementById("mp").checked;
+			var pepperoni = document.getElementById("pp").checked;
+			
+			if (cheese == false && olive == false && tomato == false && mushroom == false && pepperoni == false ){
+		     alert(" No Topping was selected. Please check at least one topping.");
+			return false;
+			if ( cheese == true && olive == true && tomato == true && mushroom == true && pepperoni == true )
+			 alert (" You may only select 3 toppings for Regular Pizza or 4 toppings for deepdish  ")
+			return false;
+			}
+		}
+			
+		
+				
+		
+		</script>
+	</head>
+	
+	<link rel = "stylesheet" href = "pizzaorder.css">
+	
+	<body>
+		<!-- Heading of the page -->
+			<h1>
+				Welcome To Aaron's Pizza Order page
+			</h1>
+		<!--Form 1 Title -->
+			<p id= "form1title">
+				<b>Costumers Info:</b> <br>
+			</p>
+		<!-- Form 1 Itself -->
+			<form name="form1">
+				Name:
+				<input type="text" name="name">
+		 
+				Address:
+				<input type="text" name="address"> 
+				
+				Email:
+				<input type="email" name="email"> <br>
+			</form>
+		<!--Form 2 Title -->
+			<p id= "form2title">
+				<b>Choose Your Pizza Size:</b> <br>
+			</p>
+		<!--Form 2 Itself  -->
+			<form  name="form2">
+				<input id= "largep" type="radio" name="pizzasize" value="large"> Large <br>
+				<input id= "mediump" type="radio" name="pizzasize" value="medium"> Medium <br>
+				<input id= "smallp" type="radio" name="pizzasize" value="small"> Small <br>
+			</form>
+		<!-- Form 3 Title-->
+			<p id= "form3title">
+				<b>Choose Your Pizza Toppings:</b> <br>
+			</p>
+		<!--Form 3 Itself -->
+			<form  name="form3">
+				<input id="cp" type="checkbox" name="pizzatoppings" value="cheese"> Cheese
+				<input id="op" type="checkbox" name="pizzatoppings" value="olive">	Olive
+				<input id="tp" type="checkbox" name="pizzatoppings" value="tomato">	Tomato
+				<input id="mp" type="checkbox" name="pizzatoppings" value="mushroom"> Mushroom
+				<input id="pp" type="checkbox" name="pizzatoppings" value="pepperoni"> Pepperoni <br>
+			</form>
+		<!--Form 4 Title -->
+			<p id= "form4title">
+				<b>Choose Pizza Type:</b> <br>
+			</p>
+		<!-- Form 4 Itself -->
+			<form  name="form4">
+				<select>
+					<option id="regularpizza" value="regular">Regular</option>
+					<option id="deepdishpizza" value="deepdish">Deep Dish</option>\
+				</select>
+			</form>
+		<!-- The Button with functionality to submit an order and add up all the pricing. -->
+			<button onclick="submitorder()">Order</button>
+		<!-- Prices that will be displayed on the page-->
+			<p id = "prices">
+				<b>Prices</b>: <br>
+				- Size: S - $5;  M - $8;  L - $10. If deep dish it is an extra $4.<br>
+				- Toppings: Each topping is $3
+			</p>
+	
+	</body>
+
+</html>

@@ -1,0 +1,34 @@
+<html>
+	<head>
+		<title>
+			Javsscript Html
+		</title>
+	</head>
+	<body>
+	
+	
+		<script type="text/javascript">
+			var firstname = prompt("Please enter your first name.");
+			var lastname = prompt("Please enter your last name.");
+				var namechoosing = window.confirm( "Is it okay to call you by your first name?. Click OK to confirm otherwise click Cancel to call you by your last name.");
+					{
+					if ( namechoosing == true)
+						document.write ( "<h1> Hello " + firstname + "</h1>" );
+						
+					else if (namechoosing == false)
+						document.write ( "<h1> Hello " + lastname  + "</h1>" );
+						
+					}
+			var temperature = prompt("Please enter your the temperature unit to convert. *Please enter numbers only.* ");	
+				var temperatureask = prompt("The temperature value you enter is in, (Enter) 'F' for Fahrenheit, 'C' for Celsius");
+					{
+					if ( (temperatureask == "F" ) && (temperatureask != "C" ) )
+						document.write ( " " +temperature + " Fahrenheit is " + ((temperature-32)/(1.8)) + " Celcious." );
+						
+					else if ( (temperatureask == "C") && (temperatureask != "F" ))
+						document.write ( " " + temperature + " Celcious is " + ((temperature * (9/5))+32) + " Fahrenheit." );
+						
+					}
+		</script>
+	</body>
+</html>

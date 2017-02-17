@@ -1,0 +1,79 @@
+1)
+<h3>To Do</h3>
+<ol>
+    <li> Get Milk </li>
+    <li> Study CS120 </li>  
+    <li> Clean up </li>
+    <li> Mow the lawn </li>
+      
+</ol>
+
+2)
+	a) 
+	One syntax problem is that under <tbody> theres no closing statement
+ 	that close <tbody>.
+	b)
+	Theres a second friendly in the table. In the end<td>Osaka</td>
+                   					 <td>None</td>
+                    					 <td>Hostile</td>
+                 				         <td>None</td>
+                 				         <td>Friendly</td>
+                 				         <td>Friendly</td>
+	The friendly does not go witt any table above causing it to go out of the 
+	table imaginary border. Either it has to be taken out or ad another colum.
+
+3)
+One problem in the syntax of css would be the body part.It will not display
+ the background color which is supposed to be red for the reason that 
+it was typed, (bgcolor) if you wanted background color you needed to write
+(background-color: (thecoloryouwant). 
+
+4)
+One reason to choose HMTL5 for email input type than text input type is because 
+when choosing email input type you can verify wheather the user has inputed the 
+right information, in this case the right email address and not a random text.
+
+Second reason its better is that you can organize it much better when it comes to
+javascript and choosing what to do with the email adress rather then choosing all 
+text inputs to do a certain thing, its easier for the coder to just modify the email
+input type to do certain things for its websites.
+
+5)
+
+The difference is that strong and em described its meaning not just typography like b and i
+
+6)
+I would use css to make the content clickable in certain areas. Such as right part of the content
+it would click and redirect you to the first person page, the center would also be clickable for the
+middle person in the image and finally the left side of the content would be also clickable and 
+would redirect you to the last guy on the left page.
+
+7)
+<a href="index.html">Contact Section of Mycompany</a>
+
+8) 
+<link rel="icon" href="http://www.mycompany.com/resources/img/favicon.ico"/>
+
+9)
+Red
+
+10)
+Firt child being selected 
+
+11)
+
+Depending on the browser if you go to developer on the web browser and to web console and 
+look at the incorrect sections that are usally red, it will tell you the 
+cause such as " 'yourFunction' not defined " and it will tell you exactly 
+where is not defined. 
+
+12)
+	a)
+	This is an extertal script since its a file that is named functions.js
+	The js is probably being link to the HTMl making this file ".js" a external
+	b)
+	To make it execute you would probably need a button in the html site and have 
+	an attribute when clicked it would execute the function "welcome()"
+
+
+

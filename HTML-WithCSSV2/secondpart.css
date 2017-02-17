@@ -1,0 +1,40 @@
+body {
+    background-color: black;
+	
+}
+h1 {
+	color: white;
+}
+a:link {
+	
+    color: hotpink;
+	
+}
+
+a:visited {
+	
+    color:yellow;
+}
+
+a:hover {
+	
+    color: lightblue;
+}
+a:active {
+	
+    color: green;
+}
+p {
+	color: lightgreen;
+}
+
+p::first-letter {
+    color: red;
+	 font-weight: bold;
+    
+}
+img {
+    float: right;
+	padding: 10px;
+	
+}
